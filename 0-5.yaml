@@ -45,7 +45,6 @@ points:
           origin: [-9.5, -9]
       rows:
         thumb:
-  rotate: 10
 outlines:
   exports:
     raw:
