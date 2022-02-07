@@ -129,7 +129,7 @@ outlines:
           - ref: thumbfan_home_thumb
             shift: [32,13]
     _switch_cutouts:
-      - type: keysasd
+      - type: keys
         side: left
         size: 14 # Plate cutouts are 14mm * 14mm for both MX and Choc
         bound: false
