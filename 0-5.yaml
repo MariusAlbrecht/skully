@@ -16,41 +16,41 @@ points:
           origin: [-12, -19]
           stagger: 23
           rows:
-          bottom:
-            column_net: P0
-          home:
-            column_net: P4
-          top:
-             column_net: P9
+            bottom:
+              column_net: P0
+            home:
+              column_net: P4
+            top:
+              column_net: P9
         middle:
           rotate: -1
           stagger: 5
           rows:
-          bottom:
-            column_net: P1
-          home:
-            column_net: P5
-          top:
-             column_net: P10
+            bottom:
+              column_net: P1
+            home:
+              column_net: P5
+            top:
+              column_net: P10
         index:
           stagger: -4
           rotate: -3
           rows:
-          bottom:
-            column_net: P2
-          home:
-            column_net: P6
-          top:
-             column_net: P11
+            bottom:
+              column_net: P2
+            home:
+              column_net: P6
+            top:
+              column_net: P11
         inner:
           stagger: -11
           rows:
-          bottom:
-            skip: true
-          home:
-            column_net: P/
-          top:
-             column_net:
+            bottom:
+              skip: true
+            home:
+              column_net: P7
+            top:
+              column_net: P12
       rows:
         bottom:
         home:
@@ -134,8 +134,8 @@ outlines:
         size: 14 # Plate cutouts are 14mm * 14mm for both MX and Choc
         bound: false
     switch_plate:
-      type: outline
-      [raw, -_switch_cutouts]
+      - raw
+      - -_switch_cutouts]
 cases:
   switchplate:
     - type: outline
