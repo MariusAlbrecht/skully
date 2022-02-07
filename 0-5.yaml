@@ -7,21 +7,50 @@ points:
           rows:
             bottom:
               skip: true
+            home:
+              column_net: P3
+            top:
+              column_net: P8
         ring:
           rotate: -9
           origin: [-12, -19]
           stagger: 23
+          rows:
+          bottom:
+            column_net: P0
+          home:
+            column_net: P4
+          top:
+             column_net: P9
         middle:
           rotate: -1
           stagger: 5
+          rows:
+          bottom:
+            column_net: P1
+          home:
+            column_net: P5
+          top:
+             column_net: P10
         index:
           stagger: -4
           rotate: -3
-        inner:
           rows:
-            bottom:
-              skip: true
+          bottom:
+            column_net: P2
+          home:
+            column_net: P6
+          top:
+             column_net: P11
+        inner:
           stagger: -11
+          rows:
+          bottom:
+            skip: true
+          home:
+            column_net: P/
+          top:
+             column_net:
       rows:
         bottom:
         home:
@@ -72,15 +101,57 @@ outlines:
             shift: [10,10]
           - ref: thumbfan_home_thumb
             shift: [7,13]
+    pcb:
+      - type: polygon
+        points:
+          - ref: matrix_inner_top
+            shift: [30,10]
+          - ref: matrix_inner_top
+            shift: [10,10]
+          - ref: matrix_index_top
+            shift: [5,10]
+          - ref: matrix_middle_top
+            shift: [0,10]
+          - ref: matrix_ring_top
+            shift: [-10,10]
+          - ref: matrix_pinky_top
+            shift: [-10,10]
+          - ref: matrix_pinky_home
+            shift: [-10,-10]
+          - ref: thumbfan_near_thumb
+            shift: [-10,-10]
+          - ref: thumbfan_home_thumb
+            shift: [0,-10]
+          - ref: thumbfan_far_thumb
+            shift: [10,-10]
+          - ref: thumbfan_far_thumb
+            shift: [10,10]
+          - ref: thumbfan_home_thumb
+            shift: [32,13]
     _switch_cutouts:
       - type: keys
         side: left
         size: 14 # Plate cutouts are 14mm * 14mm for both MX and Choc
         bound: false
     switch_plate:
+      type: outline
       [raw, -_switch_cutouts]
 cases:
   switchplate:
     - type: outline
       name: switch_plate
       extrude: 1.2
+pcbs:
+  skully:
+    outlines:
+      main:
+        outline: raw
+    footprints:
+      promicro:
+        type: promicro
+        anchor:
+          ref: matrix_inner_home
+          shift: [19, -8.5]
+          rotate: -90
+        params:
+          orientation: down
