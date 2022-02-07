@@ -4,4 +4,4 @@ A split, wireless, ergo keybaord inspired by weteor's [3w6](https://github.com/w
 
 The overall shape of one side reminded me of a skull, thus the name and silkscreen
 
-![image](layout.png)
+![image](pics/layout.png)
