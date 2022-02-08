@@ -63,15 +63,24 @@ points:
         near:
           rotate: 5
           origin: [20, -15]
+          rows:
+            thumb:
+              column_net: P13
         home:
           spread: 21.25
           rotate: -19
           origin: [-11.75, -9]
           stagger: 2
+          rows:
+            thumb:
+              column_net: P14
         far:
           spread: 21.25
           rotate: -19
           origin: [-9.5, -9]
+          rows:
+            thumb:
+              column_net: P15
       rows:
         thumb:
 outlines:
@@ -141,19 +150,23 @@ cases:
     - type: outline
       name: switch_plate
       extrude: 1.2
+points.key:
+  footprints:
+    - type: choc
+      nets:
+        from: =column_net
+        to: GND
+      params:
+        hotswap: true
+        reverse: true
+        keycaps: true     
 pcbs:
   skully:
     outlines:
       main:
         outline: pcb
     footprints:
-      choc:
-        type: choc
-        nets:
-          from: =column_net
-          to: =column_net
-        params:
-          keycaps: true
+
       promicro:
         type: promicro
         anchor:
