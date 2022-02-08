@@ -105,9 +105,9 @@ outlines:
       - type: polygon
         points:
           - ref: matrix_inner_top
-            shift: [30,10]
+            shift: [30,12]
           - ref: matrix_inner_top
-            shift: [10,10]
+            shift: [10,10.5]
           - ref: matrix_index_top
             shift: [5,10]
           - ref: matrix_middle_top
@@ -135,23 +135,30 @@ outlines:
         bound: false
     switch_plate:
       - raw
-      - -_switch_cutouts]
+      - -_switch_cutouts
 cases:
   switchplate:
     - type: outline
       name: switch_plate
       extrude: 1.2
 pcbs:
+  points.key:
+    footprints:
+      - type: choc
+        nets:
+          from: =column_net
+        params:
+          keycaps: true
   skully:
     outlines:
       main:
-        outline: raw
+        outline: pcb
     footprints:
       promicro:
         type: promicro
         anchor:
           ref: matrix_inner_home
-          shift: [19, -8.5]
-          rotate: -90
+          shift: [21.5, 11.5]
+          rotate: -85.6
         params:
           orientation: down
