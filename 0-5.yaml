@@ -142,18 +142,18 @@ cases:
       name: switch_plate
       extrude: 1.2
 pcbs:
-  points.key:
-    footprints:
-      - type: choc
-        nets:
-          from: =column_net
-        params:
-          keycaps: true
   skully:
     outlines:
       main:
         outline: pcb
     footprints:
+      choc:
+        type: choc
+        nets:
+          from: =column_net
+          to: =column_net
+        params:
+          keycaps: true
       promicro:
         type: promicro
         anchor:
